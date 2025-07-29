@@ -1,0 +1,237 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+}
+
+header {
+  text-align: center;
+  background-color: #dff0ff;
+  padding: 30px 0;
+}
+
+.main-name {
+  font-size: 3em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 1.8em;
+  color: #34495e;
+}
+
+.intro {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 4px solid #2c3e50;
+}
+
+section {
+  padding: 30px 20px;
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 1.8em;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.highlight {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.resume-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background-color: #2980b9;
+}
+
+.contact p, .contact a {
+  font-size: 1.1em;
+  margin: 8px 0;
+  color: #333;
+}
+
+#flower-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.flower {
+  position: absolute;
+  top: -20px;
+  font-size: 24px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+/* === Basic Reset & Styling === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* === Header Styling === */
+header {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: slideDown 1.2s ease-out;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  animation: slideDown 1.5s ease-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  animation: fadeIn 2.5s ease-in;
+}
+
+/* === Profile Image === */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px #00f2fe;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #4facfe;
+}
+
+/* === Section Styling === */
+section {
+  padding: 40px 60px;
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+section:nth-of-type(even) {
+  background-color: #e6f7ff;
+}
+
+/* Make sections appear smoothly */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Resume Button === */
+.resume-btn {
+  padding: 10px 20px;
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.4s, transform 0.4s;
+}
+.resume-btn:hover {
+  background-color: #00c3ff;
+  transform: scale(1.1);
+}
+
+/* === Contact & Skills === */
+.skills ul, .contact p, .education ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* === Flowers Animation === */
+.flower {
+  position: fixed;
+  top: 0;
+  font-size: 24px;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

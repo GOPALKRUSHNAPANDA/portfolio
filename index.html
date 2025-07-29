@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gopal's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1 class="main-name">Gopal Krushna Panda</h1>
+    <h2 class="sub-heading">Hi everyone! 👋</h2>
+    <p class="intro">I'm a CSE student from Centurion University</p>
+    <img src="gopal.jpg" alt="Gopal's Photo" class="profile-img" />
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I am a passionate CSE student. I love working on machine learning, DJ setups, and exploring hacking. I am also interested in Java and DSA.</p>
+    <p>I enjoy playing musical instruments and badminton.</p>
+    <a href="Gopal_Resume.pdf" download>
+      <button class="resume-btn">⬇️ Download Resume</button>
+    </a>
+  </section>
+
+  <section class="projects">
+    <h2>📁 My Projects</h2>
+    <ul>
+      <li><strong>MNIST Neural Network</strong> – A digit recognizer using TensorFlow</li>
+      <li><strong>Portfolio Website</strong> – This website you're viewing right now!</li>
+      <li><strong>Weather App</strong> – A simple app to check real-time weather using API</li>
+      <li><strong>Face Detection App</strong> – A Python app using OpenCV to detect faces</li>
+    </ul>
+  </section>
+
+  <section class="education">
+    <h2>🎓 Education</h2>
+    <ul>
+      <li><strong>10th Standard:</strong> Saraswati Sishu Vidya Mandir, Paralakhemundi — <span class="highlight">Scored 80%</span></li>
+      <li><strong>12th Standard:</strong> Maharshi Gurukul, Gunupur — <span class="highlight">Scored 68%</span></li>
+      <li><strong>B.Tech in CSE:</strong> Centurion University of Technology and Management, Paralakhemundi (Ongoing)</li>
+    </ul>
+  </section>
+
+  <section class="skills">
+    <h2>💻 My Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Machine Learning</li>
+      <li>Web Development</li>
+      <li>Java</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>📞 Contact Me</h2>
+    <p>📱 Contact number: 8118086639</p>
+    <p>📧 Email: pandagopalkrushna69@gmail.com</p>
+    <p>💻 GitHub: github.com/GopalUsername</p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/gopal-krushna-panda-878457364/">Click Here</a></p>
+  </section>
+
+  <div id="flower-container"></div>
+
+  <script>
+    const flowerContainer = document.getElementById("flower-container");
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.classList.add("flower");
+      flower.innerText = "🌹 ";
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDuration = 2 + Math.random() * 3 + "s";
+      flowerContainer.appendChild(flower);
+      setTimeout(() => flower.remove(), 5000);
+    }
+    setInterval(createFlower, 300);
+  </script>
+  <script>
+    const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+         }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+     });
+    </script>
+
+
+</body>
+</html>
